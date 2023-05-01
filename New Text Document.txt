@@ -1,0 +1,11 @@
+Pagination buttons with CSS and Javascript
+
+Pagination in Vanilla JavaScript using a REST API
+
+Front-End Pagination With JavaScript
+
+
+Front-End Pagination using JavaScript...
+
+Shopping Cart using HTML CSS and Javascript
+Dynamic pagination using vanilla JavaScript like backend paginations. File link in description

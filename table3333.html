@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1 class="text-center">HFC SOP System</h1>
+    <!-- Table Data -->
+    <div class="container">
+        <hr>
+        <input type="text" id="myInput" onkeyup='tableSearch()' placeholder="Search">
+
+        <table class="table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+            <tr>
+                <th>Serial</th>
+                <th>Content</th>
+                <th>Post Date</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><a href="file:///C:/Users/Shofikul%20Islam/Desktop/SOP%20INDEX/E-TIN%20Info.%20of%20Shofikul%20Islam.pdf"target="_blank">HFC Profile</a></td>
+                <td>29-03-2023</td>
+            </tr>
+            
+            <tr>
+                <td>2</td>
+                <td>HFC Letter</td>
+                <td>30-03-2023</td>
+            </tr>
+			
+			<tr>
+                <td>3</td>
+                <td>AMT</td>
+                <td>31-03-2023</td>
+            </tr>
+			<tr>
+                <td>4</td>
+                <td>Manager</td>
+                <td>01-04-2023</td>
+            </tr>
+			<tr>
+                <td>5</td>
+                <td>ICAB</td>
+                <td>02-04-2023</td>
+            </tr>
+			<tr>
+                <td>6</td>
+                <td>Leave Policy</td>
+                <td>03-04-2023</td>
+            </tr>
+			<tr>
+                <td>7</td>
+				<td><a href="file:///C:/Users/Shofikul%20Islam/Desktop/SOP%20INDEX/E-TIN%20Info.%20of%20Shofikul%20Islam.pdf"target="_blank">TIN</a></td>
+                <
+                <td>04-04-2023</td>
+            </tr>
+			
+        </table>
+    </div>
+
+    <script type="application/javascript">
+        function tableSearch() {
+            let input, filter, table, tr, td, txtValue;
+
+            //Intialising Variables
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+
+            for (let i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[1];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+
+        }
+    </script>
+</body>
+
+<footer></footer>
+
+</html>

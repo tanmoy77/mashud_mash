@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+<link rel="stylesheet" href="table-paging.css">
+<body>
+    <h1 class="text-center">HFC SOP System</h1>
+    <!-- Table Data -->
+    <div class="container">
+        <hr>
+        <input type="text" id="myInput" onkeyup='tableSearch()' placeholder="Search">
+
+        <table class="table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+            <tr>
+                <th>Serial</th>
+                <th>Content</th>
+                <th>Post Date</th>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><a href="file:///C:/Users/BADOL-IT/Desktop/SOP%20INDEX/E-TIN%20Info.%20of%20Shofikul%20Islam.pdf"target="_blank">HFC Profile</a></td>
+                <td>29-03-2023</td>
+            </tr>
+            
+            <tr>
+                <td>12</td>
+                <td>HFC Letter</td>
+                <td>30-03-2023</td>
+            </tr>
+			
+			<tr>
+                <td>13</td>
+                <td>AMT</td>
+                <td>31-03-2023</td>
+            </tr>
+			<tr>
+                <td>14</td>
+                <td>Manager</td>
+                <td>01-04-2023</td>
+            </tr>
+			<tr>
+                <td>15</td>
+                <td>ICAB</td>
+                <td>02-04-2023</td>
+            </tr>
+			<tr>
+                <td>16</td>
+                <td>Leave Policy</td>
+                <td>03-04-2023</td>
+            </tr>
+			<tr>
+                <td>17</td>
+                <td>HFC Policy</td>
+                <td>04-04-2023</td>
+            </tr>
+			<tr>
+                <td>18</td>
+                <td>HFC Exam Policy</td>
+                <td>04-04-2023</td>
+            </tr>
+			<tr>
+                <td>19</td>
+                <td>HFC Partner Policy</td>
+                <td>04-04-2023</td>
+            </tr>
+			<tr>
+                <td>20</td>
+                <td>HFC Manager Policy</td>
+                <td>04-04-2023</td>
+            </tr>
+			
+        </table>
+		
+    </div>
+
+    <script type="application/javascript">
+        function tableSearch() {
+            let input, filter, table, tr, td, txtValue;
+
+            //Intialising Variables
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+
+            for (let i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[1];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+
+        }
+    </script>
+	
+	<div class="container">
+	<div class="pagination">
+	<button class="btn1" onclick="backBtn()"> <img src="arrow.png"> Previous</button>
+	<ul>
+	<li class="link" value="1" onclick="activeLink()"><a href="table.html">1</a></li>
+	<li class="link active" value="2" onclick="activeLink()"><a href="table2.html">2</a></li>
+	<li class="link" value="3" onclick="activeLink()"><a href="table3.html">3</li></a>
+	<li class="link" value="4" onclick="activeLink()"><a href="table4.html">4</li></a>
+	<li class="link" value="5" onclick="activeLink()"><a href="table5.html">5</li></a>
+	<li class="link" value="6" onclick="activeLink()"><a href="table6.html">6</li></a>
+	</ul>
+	<button class="btn2" onclick="nextBtn()"> Next<img src="arrow.png"></button>
+	</div>
+	</div>
+	<script src="paging.js"></script>
+</body>
+
+<footer position="center">HFC@Copyright-2023</footer>
+
+</html>
